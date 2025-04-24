@@ -34,7 +34,7 @@ jobs:
           mv sonar-scanner-5.0.1.3006-linux sonar-scanner
           chmod +x sonar-scanner/bin/sonar-scanner
           ./sonar-scanner/bin/sonar-scanner \
-            -Dsonar.projectKey=squ_9ef3b4b7a44ccd656125e9b68e3b55f1288b281f \
+            -Dsonar.projectKey=sqa_a699ff0ca4008b7b9869f748eef2b82fc422abdb \
             -Dsonar.sources=. \
             -Dsonar.host.url=http://http://192.168.152.129:9000 \
             -Dsonar.login=$SONAR_TOKEN
