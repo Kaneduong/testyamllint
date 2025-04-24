@@ -1,0 +1,56 @@
+# invalid5.yaml
+application: myApp
+environment: production
+configurations:
+  - name: config1
+    value: true
+  - name config2  # thiếu dấu hai chấm sau key "name"
+    value: false
+servers:
+  - host: server1.example.com
+    port: 80
+  - host server2.example.com
+    port: 443
+security:
+  encryption: enabled
+  keys:
+    public_key: |
+      -----BEGIN PUBLIC KEY-----
+      MIIBIjANBgk... [truncated]
+      -----END PUBLIC KEY-----
+    private_key: |
+      -----BEGIN PRIVATE KEY-----
+      MIIEvQIBADANB... [truncated]
+      -----END PRIVATE KEY-----
+features:
+  - name: featureA
+    enabled: yes
+  - name: featureB
+    enabled: no
+# Additional lines to get over 50 lines
+misc:
+  alpha: one
+  beta: two
+  gamma: three
+# Malformed mapping entries
+detail:
+   info: "This is detail"
+   note "Missing colon after note"
+statements:
+   item1: value1
+   item2: value2
+   item3 value3
+logs:
+   level: debug
+   path: /var/log/myapp.log
+appendix:
+   a: 1
+   b: 2
+   c: 3
+   d: 4
+   e: 5
+   f: 6
+   g: 7
+   h: 8
+   i: 9
+   j: 10
