@@ -1,0 +1,53 @@
+# invalid6.yaml
+project: "TestProject"
+version: "v1.2.3"
+description: "This is a test project with intentionally malformed YAML configuration."
+settings:
+  mode: production
+  retries: three  # giá trị nên là số, không hợp lệ nếu yêu cầu numeric
+  timeout: 30s  # giá trị timeout có unit, không ở định dạng thông thường
+  features:
+    featureA: enabled
+    featureB disabled   # thiếu dấu hai chấm
+    featureC: "true"
+dependencies:
+  - name: library1
+    version: ">=2.0.0"
+  - name: library2
+    version "1.5.0"  # thiếu dấu hai chấm sau key "version"
+build:
+  steps:
+    - step: install
+      command: npm install
+    - step build        # thiếu dấu hai chấm và không dùng dấu "-" đúng cho mapping
+      command: npm run build
+    - step: test
+      command: npm test
+metadata:
+  created: "2025-04-24"
+  modified "2025-04-25"  # thiếu dấu hai chấm sau key "modified"
+  tags:
+    - beta
+    - release
+extra_settings:
+  setting1: value1
+  setting2:
+    subsetting1: value2
+    subsetting2 value3   # thiếu dấu hai chấm
+  setting3: value4
+# Additional lines to cross 50 lines
+line1: data1
+line2: data2
+line3: data3
+line4: data4
+line5: data5
+line6: data6
+line7: data7
+line8: data8
+line9: data9
+line10: data10
+line11: data11
+line12: data12
+line13: data13
+line14: data14
+line15: data15
