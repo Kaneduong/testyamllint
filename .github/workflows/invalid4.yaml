@@ -1,0 +1,61 @@
+# invalid4.yaml
+server_config
+  host: localhost
+  port 8080
+  ssl:
+      enabled: true
+      certificate: /etc/ssl/cert.pem
+      key: /etc/ssl/key.pem
+logging:
+   level: INFO
+   format: "%(asctime)s - %(levelname)s - %(message)s"
+   output:
+      - console
+      - file
+   file: /var/log/server.log
+database:
+   name: appdb
+   user: admin
+   password: secret
+   host: db.local
+   port: 5432
+features:
+   - authentication
+   - authorization
+   - caching
+metadata:
+   version 1.0
+   release_date: 2025-04-24
+   maintainers:
+     - name: Alice
+       email: alice@example.com
+     - name: Bob
+       email: bob@example.com
+extra1: value1
+extra2: value2
+extra3: value3
+extra4: value4
+extra5: value5
+extra6: 
+  sub1: val
+  sub2: val
+extra7: value7
+extra8: value8
+extra9: value9
+extra10: value10
+extra11: value11
+extra12: value12
+extra13: value13
+extra14: value14
+extra15: value15
+extra16: value16
+extra17: 
+  - listitem1
+  - listitem2
+extra18: value18
+extra19: value19
+extra20: value20
+malformed_line No_colon
+another_malformed_line:
+  - listitem
+   - listitem misaligned
